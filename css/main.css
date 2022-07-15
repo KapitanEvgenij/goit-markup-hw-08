@@ -42,6 +42,9 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 body {
@@ -88,10 +91,25 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .btn {
@@ -419,20 +437,34 @@ body {
 
 /*--------- Features STYLES --------- */
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .features-list__item {
-  width: 270px;
+  width: 100%;
 }
-.features-list__item + .features-list__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .features-list__thumb {
@@ -453,6 +485,12 @@ body {
   text-transform: uppercase;
   color: var(--second-title-color);
   margin-bottom: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features-list__subtitle {
+    text-align: left;
+  }
 }
 
 .features-list__text {
@@ -464,6 +502,12 @@ body {
 /*--------- Products STYLES --------- */
 .products {
   padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .products {
+    display: block;
+  }
 }
 
 .products-list {
@@ -510,21 +554,38 @@ body {
 /*--------- TEAM STYLES --------- */
 .team {
   background-color: #F5F4FA;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   margin: -15px;
 }
 
 .team-list__item {
-  flex-basis: calc(33.3333333333% - 30px);
+  width: 100%;
   margin: 15px;
   background-color: var(--team-card-bg);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    flex-basis: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    flex-basis: calc(25% - 30px);
+  }
 }
 
 .team-list__title-wrap {
@@ -594,8 +655,14 @@ body {
 
 /*----------- CLIENTS ---------------*/
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__title {
@@ -610,15 +677,23 @@ body {
 
 .clients-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients-list__item {
-  width: 170px;
   height: 92px;
+  width: calc((100% - 30px) / 2);
 }
-.clients-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients-list__link {
@@ -811,18 +886,23 @@ body {
 
 .portfolio-nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
 }
-.portfolio-nav .portfolio-item {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .portfolio-nav {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-nav {
+    margin-bottom: 50px;
+  }
 }
 
-.portfolio-item:first-child {
-  margin-left: 0;
-}
-
-.portfolio-btn {
+.portfolio__btn {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -837,7 +917,7 @@ body {
   border-radius: 4px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-btn:hover, .portfolio-btn:focus {
+.portfolio__btn:hover, .portfolio__btn:focus {
   color: #ffffff;
   background-color: var(--main-btn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -849,26 +929,37 @@ body {
   flex-wrap: wrap;
   margin: -15px;
 }
-.portfolio-list .portfolio-item {
-  flex-basis: calc(33.3333333333% - 30px);
+
+.portfolio-list__item {
+  width: 100%;
   margin: 15px;
 }
+@media screen and (min-width: 768px) {
+  .portfolio-list__item {
+    flex-basis: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list__item {
+    flex-basis: calc(33.3333333333% - 30px);
+  }
+}
 
-.portfolio-link {
+.portfolio-list__link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-link:hover, .portfolio-link:focus {
+.portfolio-list__link:hover, .portfolio-list__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   outline: transparent;
 }
 
-.portfolio-top-wrap {
+.portfolio-list__top-wrap {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-top-text {
+.portfolio-list__top-text {
   position: absolute;
   top: 0;
   font-weight: 400;
@@ -882,18 +973,18 @@ body {
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-link:hover .portfolio-top-text, .portfolio-link:focus .portfolio-top-text {
+.portfolio-list__link:hover .portfolio-list__top-text, .portfolio-list__link:focus .portfolio-list__top-text {
   transform: translateY(0);
 }
 
-.portfolio-title-wrap {
+.portfolio-list__title-wrap {
   padding: 20px 24px;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
 }
 
-.portfolio-subtitle {
+.portfolio-list__subtitle {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -902,7 +993,7 @@ body {
   margin-bottom: 4px;
 }
 
-.portfolio-text {
+.portfolio-list__text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;

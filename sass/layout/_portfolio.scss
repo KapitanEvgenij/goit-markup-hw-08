@@ -6,19 +6,19 @@
 
 .portfolio-nav {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    & .portfolio-item {
-            margin-left: 8px;
-        }
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
+    @media screen and (min-width: 768px) {
+       margin-bottom: 30px;
+       justify-content: center;
+    }
+    @media screen and (min-width: 1200px){
+        margin-bottom: 50px;
+    }   
 }
-.portfolio-item:first-child {
-    margin-left: 0;
-}
 
-
-
-.portfolio-btn {
+.portfolio__btn {
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -49,18 +49,22 @@
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
-    & .portfolio-item {
-            flex-basis: calc(100% / 3 - 30px);
-            margin: 15px;
-    
-        }
+}
 
+.portfolio-list__item {
+    width: 100%;
+    margin: 15px;
+   @media screen and (min-width: 768px) {
+        flex-basis: calc(100% / 2 - 30px);
+    }
+    @media screen and (min-width: 1200px){
+        flex-basis: calc(100% / 3 - 30px);
+    }
 }
 
 
 
-
-.portfolio-link {
+.portfolio-list__link {
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 &:hover,
@@ -75,14 +79,14 @@
 
 
 
-.portfolio-top-wrap {
+.portfolio-list__top-wrap {
     position: relative;
     overflow: hidden;
 }
 
 
 
-.portfolio-top-text {
+.portfolio-list__top-text {
     position: absolute;
     top: 0;
     font-weight: 400;
@@ -95,8 +99,8 @@
     height: 100%;
     transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    .portfolio-link:hover &,
-        .portfolio-link:focus & {
+    .portfolio-list__link:hover &,
+        .portfolio-list__link:focus & {
             transform: translateY(0);
         }
 
@@ -104,7 +108,7 @@
 
 
 
-.portfolio-title-wrap {
+.portfolio-list__title-wrap {
     padding: 20px 24px;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
@@ -112,7 +116,7 @@
 
 }
 
-.portfolio-subtitle {
+.portfolio-list__subtitle {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -121,7 +125,7 @@
     margin-bottom: 4px;
 }
 
-.portfolio-text {
+.portfolio-list__text {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
