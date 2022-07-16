@@ -641,6 +641,7 @@ body {
 
 .mob-social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-social__link {
