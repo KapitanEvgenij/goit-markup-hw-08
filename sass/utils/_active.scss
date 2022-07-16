@@ -6,6 +6,14 @@
     }
 }
 
+.mob-menu-list__link {
+
+    &.mob-active {
+        color: var(--accent-color);
+       
+    }
+}
+
 .active {
     &::after {
             content: '';
