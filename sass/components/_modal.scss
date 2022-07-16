@@ -16,7 +16,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 528px;
+    width: 300px;
     min-height: 581px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -26,16 +26,35 @@
     .backdrop.is-hidden & {
             transform: translate(-50%, -50%) scale(0);
         }
+                @media screen and (min-width: 480px) {
+                    width: 450px;
+                }
+     @media screen and (min-width: 768px){
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 528px;
+    }
+    
 }
 
 .modal__title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 12px;
     color: var(--second-title-color);
+    @media screen and (min-width: 768px) {
+             font-size: 20px;
+            line-height: 1.5;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            font-size: 20px;
+            line-height: 1.15;
+        }
 }
 
 .modal-form__input-label {
@@ -111,8 +130,8 @@
 }
 .modal-form__check-text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 8px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     display: flex;
     align-items: center;
@@ -140,7 +159,22 @@
     & a {
     color: var(--accent-color);
     margin-left: 5px;
-}
+    }
+        @media screen and (min-width: 480px) {
+            font-size: 12;
+            line-height: 1.16;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 12;
+            line-height: 1.16;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+            line-height: 1.71;
+        }
+
 }
 
 
