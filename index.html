@@ -124,15 +124,18 @@
         <h2 class="products__title">Чем мы занимаемся</h2>
         <ul class="products-list list">
           <li class="products-list__item">
-            <img src="./images/box1.webp" alt="Десктопные приложения" width="370" />
+            <img srcset="./images/desktops.jpg 1x, ./images/desktops-2x.jpg 2x" src="./images/box_2.jpg"
+              alt="Десктопные приложения" width="370" />
             <h3 class="products-list__item-title">Десктопные приложения</h3>
           </li>
           <li class="products-list__item">
-            <img src="./images/box2.webp" alt="Мобильные приложения" width="370" />
+            <img srcset="./images/mobiles.jpg 1x, ./images/mobiles-2x.jpg 2x" src="./images/box_2.jpg"
+              alt="Мобильные приложения" width="370" />
             <h3 class="products-list__item-title">Мобильные приложения</h3>
           </li>
           <li class="products-list__item">
-            <img src="./images/box3.webp" alt="Дизайнерские решения" width="370" />
+            <img srcset="./images/design.jpg 1x, ./images/design-2x.jpg 2x" src="./images/box_3.jpg"
+              alt="Дизайнерские решения" width="370" />
             <h3 class="products-list__item-title">Дизайнерские решения</h3>
           </li>
         </ul>
@@ -144,7 +147,13 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team-list list">
           <li class="team-list__item">
-            <img src="./images/photo1.webp" alt="Игорь Демьяненко - разработчик продукта" width="270" />
+            <picture>
+              <source srcset="./images/designer.jpg 1x, ./images/designer-2x.jpg 2x" media="(min-width: 1200)">
+              <source srcset="./images/designer-tab.jpg 1x, ./images/designer-tab-2x.jpg 2x" media="(min-width: 768)">
+              <source srcset="./images/designer-mob.jpg 1x, ./images/designer-mob-2x.jpg 2x" media="(min-width: 320)">
+              <img src="./images/product_designer_photo.jpg" alt="Игорь Демьяненко - разработчик продукта"
+                width="810" />
+            </picture>
             <div class="team-list__title-wrap">
               <h3 class="team-list__subtitle">Игорь Демьяненко</h3>
               <p lang="en" class="team-list__text">Product Designer</p>
@@ -173,7 +182,13 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img src="./images/photo2.webp" alt="Ольга Репина - фронтенд разработчик" width="270" />
+            <picture>
+              <source srcset="./images/frontend.jpg 1x, ./images/frontend-2x.jpg 2x" media="(min-width: 1200)">
+              <source srcset="./images/frontend-tab.jpg 1x, ./images/frontend-tab-2x.jpg 2x" media="(min-width: 768)">
+              <source srcset="./images/frontend-mob.jpg 1x, ./images/frontend-mob-2x.jpg 2x" media="(min-width: 320)">
+              <img src="./images/frontend_developer_photo.jpg" alt="Ольга Репина - фронтенд разработчик" width="810" />
+            </picture>
+
             <div class="team-list__title-wrap">
               <h3 class="team-list__subtitle">Ольга Репина</h3>
               <p lang="en" class="team-list__text">Frontend Developer</p>
@@ -202,7 +217,13 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img src="./images/photo3.webp" alt="Николай Тарасов - маркетинг менеджер" width="270" />
+            <picture>
+              <source srcset="./images/marketing.jpg 1x, ./images/marketing-2x.jpg 2x" media="(min-width: 1200)">
+              <source srcset="./images/marketing-tab.jpg 1x, ./images/marketing-tab-2x.jpg 2x" media="(min-width: 768)">
+              <source srcset="./images/marketing-mob.jpg 1x, ./images/marketing-mob-2x.jpg 2x" media="(min-width: 320)">
+              <img src="./images/marketing_photo.jpg" alt="Николай Тарасов - маркетинг менеджер" width="810" />
+            </picture>
+
             <div class="team-list__title-wrap">
               <h3 class="team-list__subtitle">Николай Тарасов</h3>
               <p lang="en" class="team-list__text">Marketing</p>
@@ -231,7 +252,13 @@
             </div>
           </li>
           <li class="team-list__item">
-            <img src="./images/photo4.webp" alt="Михаил Ермаков - разработчик интерфейса" width="270" />
+            <picture>
+              <source srcset="./images/ui.jpg 1x, ./images/ui-2x.jpg 2x" media="(min-width: 1200)">
+              <source srcset="./images/ui-tab.jpg 1x, ./images/ui-tab-2x.jpg 2x" media="(min-width: 768)">
+              <source srcset="./images/ui-mob.jpg 1x, ./images/ui-mob-2x.jpg 2x" media="(min-width: 320)">
+              <img src="./images/ui_designer_photo.jpg" alt="Михаил Ермаков - разработчик интерфейса" width="810" />
+            </picture>
+
             <div class="team-list__title-wrap">
               <h3 class="team-list__subtitle">Михаил Ермаков</h3>
               <p lang="en" class="team-list__text">UI Designer</p>
