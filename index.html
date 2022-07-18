@@ -202,9 +202,9 @@
         <ul class="team-list list">
           <li class="team-list__item">
             <picture>
-              <source srcset="./images/designer.jpg 1x, ./images/designer-2x.jpg 2x" media="(min-width: 1200)">
-              <source srcset="./images/designer-tab.jpg 1x, ./images/designer-tab-2x.jpg 2x" media="(min-width: 768)">
-              <source srcset="./images/designer-mob.jpg 1x, ./images/designer-mob-2x.jpg 2x" media="(min-width: 320)">
+              <source srcset="./images/designer.jpg 1x, ./images/designer-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/designer-tab.jpg 1x, ./images/designer-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/designer-mob.jpg 1x, ./images/designer-mob-2x.jpg 2x" media="(min-width: 320px)">
               <img src="./images/product_designer_photo.jpg" alt="Игорь Демьяненко - разработчик продукта"
                 width="810" />
             </picture>
@@ -237,9 +237,9 @@
           </li>
           <li class="team-list__item">
             <picture>
-              <source srcset="./images/frontend.jpg 1x, ./images/frontend-2x.jpg 2x" media="(min-width: 1200)">
-              <source srcset="./images/frontend-tab.jpg 1x, ./images/frontend-tab-2x.jpg 2x" media="(min-width: 768)">
-              <source srcset="./images/frontend-mob.jpg 1x, ./images/frontend-mob-2x.jpg 2x" media="(min-width: 320)">
+              <source srcset="./images/frontend.jpg 1x, ./images/frontend-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/frontend-tab.jpg 1x, ./images/frontend-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/frontend-mob.jpg 1x, ./images/frontend-mob-2x.jpg 2x" media="(min-width: 320px)">
               <img src="./images/frontend_developer_photo.jpg" alt="Ольга Репина - фронтенд разработчик" width="810" />
             </picture>
 
@@ -272,9 +272,11 @@
           </li>
           <li class="team-list__item">
             <picture>
-              <source srcset="./images/marketing.jpg 1x, ./images/marketing-2x.jpg 2x" media="(min-width: 1200)">
-              <source srcset="./images/marketing-tab.jpg 1x, ./images/marketing-tab-2x.jpg 2x" media="(min-width: 768)">
-              <source srcset="./images/marketing-mob.jpg 1x, ./images/marketing-mob-2x.jpg 2x" media="(min-width: 320)">
+              <source srcset="./images/marketing.jpg 1x, ./images/marketing-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/marketing-tab.jpg 1x, ./images/marketing-tab-2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="./images/marketing-mob.jpg 1x, ./images/marketing-mob-2x.jpg 2x"
+                media="(min-width: 320px)">
               <img src="./images/marketing_photo.jpg" alt="Николай Тарасов - маркетинг менеджер" width="810" />
             </picture>
 
@@ -307,9 +309,9 @@
           </li>
           <li class="team-list__item">
             <picture>
-              <source srcset="./images/ui.jpg 1x, ./images/ui-2x.jpg 2x" media="(min-width: 1200)">
-              <source srcset="./images/ui-tab.jpg 1x, ./images/ui-tab-2x.jpg 2x" media="(min-width: 768)">
-              <source srcset="./images/ui-mob.jpg 1x, ./images/ui-mob-2x.jpg 2x" media="(min-width: 320)">
+              <source srcset="./images/ui.jpg 1x, ./images/ui-2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./images/ui-tab.jpg 1x, ./images/ui-tab-2x.jpg 2x" media="(min-width: 768px)">
+              <source srcset="./images/ui-mob.jpg 1x, ./images/ui-mob-2x.jpg 2x" media="(min-width: 320px)">
               <img src="./images/ui_designer_photo.jpg" alt="Михаил Ермаков - разработчик интерфейса" width="810" />
             </picture>
 
@@ -501,8 +503,13 @@
         </div>
         <div class="modal-field margin-btm-30">
           <input type="checkbox" name="privacy" id="privacy" class="modal-form__input-check visually-hidden">
-          <label for="privacy" class="modal-form__check-text">Соглашаюсь с рассылкой и принимаю <a href=""> Условия
-              договора</a></label>
+          <label for="privacy" class="modal-form__check-text">
+            <div class="modal-form__check-text-wrap">Соглашаюсь с рассылкой и принимаю<a href=""
+                class="modal-form__check-link">
+                Условия договора
+              </a>
+            </div>
+          </label>
         </div>
         <button type="submit" class="modal-form__btn btn">Отправить</button>
       </form>
