@@ -617,7 +617,7 @@ body {
 }
 
 .mob-menu-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .mob-menu-list__item:not(:last-child) {
@@ -680,7 +680,6 @@ body {
 
 .mob-social__item {
   width: 100%;
-  padding: 5px;
 }
 .mob-social__item:nth-child(odd) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -705,6 +704,7 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
+  padding: 5px;
 }
 
 /*--------- HERO STYLES --------- */
@@ -762,13 +762,6 @@ body {
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .hero__title {
-    max-width: 360px;
-    font-size: 26px;
-    line-height: 1.62;
-  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
